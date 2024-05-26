@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :watches
+  # resources :watches
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   devise_for :users
@@ -10,16 +12,18 @@ Rails.application.routes.draw do
   get "up" => "rails/health#show", as: :rails_health_check
 
   # Defines the root path route ("/")
-  # root "main#index"
+
   root to: "watches#index"
 
   # resources main
-  resources :watches, only: %i[index new edit update create]
+  resources :watches, only: %i[index new create edit update]
 
   post '/watches/:id', to: 'watches#destroy'
+  # get '/watches/:id', to: 'watches#create'
 
   get '/categories/:name', to: 'categories#show'
   get '/watches/:name', to: 'watches#show'
+
   get '/find', to: 'watches#find'
   get '/search', to: 'watches#search'
   get '/sort', to: 'watches#sort'

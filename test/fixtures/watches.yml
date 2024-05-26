@@ -1,15 +1,69 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: MyString
-  description: MyText
-  category: one
-  price: 1
-  view_url: MyText
-
+#  id: 1
+  name: Seiko
+  description: somewords123
+  category: cat1
+  price: 100
+  view_url: http://localhost:3000/watches/photo/etc
+  user: non_admin
 two:
-  name: MyString
-  description: MyText
-  category: two
-  price: 1
-  view_url: MyText
+#  id: 2
+  name: Casio
+  description: somewords123
+  category: cat1
+  price: 100
+  view_url: http://localhost:3000/watches/photo/etc
+  user: non_admin
+three:
+#  id: 3
+  name: Swatch
+  description: somewords123
+  category: cat2
+  price: 1000
+  view_url: http://localhost:3000/watches/photo/etc
+  user: non_admin
+four:
+#  id: 4
+  name: Rolex
+  description: somewords123
+  category: cat3
+  price: 2000
+  view_url: http://localhost:3000/watches/photo/etc
+  user: non_admin
+#one:
+#  id: 1
+#  name: Seiko
+#  description: somewords123
+#  category_id: 1
+#  price: 100
+#  view_url: http://localhost:3000/watches/photo/etc
+#  user_id: 2
+#
+#two:
+#  id: 2
+#  name: Casio
+#  description: somewords123
+#  category_id: 1
+#  price: 100
+#  view_url: http://localhost:3000/watches/photo/etc
+#  user_id: 2
+#
+#three:
+#  id: 3
+#  name: Swatch
+#  description: somewords123
+#  category_id: 2
+#  price: 1000
+#  view_url: http://localhost:3000/watches/photo/etc
+#  user_id: 2
+#
+#four:
+#  id: 4
+#  name: Rolex
+#  description: somewords123
+#  category_id: 3
+#  price: 2000
+#  view_url: http://localhost:3000/watches/photo/etc
+#  user_id: 2

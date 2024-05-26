@@ -1,11 +1,10 @@
 class WatchesController < ApplicationController
-  #### before_action :require_authentication, except: %i[show index]
   before_action :authorize_watch!
   after_action :verify_authorized
   def index
     # @watches = Watch.all
     # @watches = (Watch.all == nil) ? ("null") : (Watch.all)
-    # @watches = Watch.order(params[:sort])
+    @watches = Watch.order(params[:sort])
   end
 
   def sort
@@ -13,7 +12,6 @@ class WatchesController < ApplicationController
   end
 
   def show
-    # @watch = Watch.find(params[:id])
     @watch = Watch.find_by name: params[:name]
     # authorize @watch
   end
@@ -28,6 +26,7 @@ class WatchesController < ApplicationController
 
   def create
     @watch = Watch.new watch_params
+    @watch.user = current_user
     if @watch.save
       redirect_to watches_path
     else

@@ -1,5 +1,6 @@
 class Watch < ApplicationRecord
   belongs_to :category
+  belongs_to :user
 
   validates :name, presence: true, length: {minimum: 5}
   validates :description, presence: true, length: {minimum: 10}
@@ -21,6 +22,7 @@ class Watch < ApplicationRecord
   def self.ransackable_associations(auth_object = nil)
     ["category"]
   end
+  #for activeadmin
   def self.ransackable_attributes(auth_object = nil)
     ["category_id", "created_at", "description", "id", "id_value", "name", "price", "updated_at", "view_url"]
   end

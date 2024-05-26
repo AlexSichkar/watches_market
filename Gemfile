@@ -8,7 +8,7 @@ gem 'activeadmin', '~> 3.2', '>= 3.2.1'
 
 gem 'bcrypt', platforms: :ruby
 gem 'sassc-rails'
-gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'main'
+# gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'main'
 
 
 
@@ -66,6 +66,8 @@ group :development, :test do
   gem 'database_cleaner'
   # gem 'rspec-json_expectations'
   # gem 'shoulda-matchers'
+  # gem 'byebug'
+
 
 end
 

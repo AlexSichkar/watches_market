@@ -58,14 +58,14 @@ group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri windows ]
   # gem 'rspec-rails', '~> 6.1.0'
-  gem 'rspec'
-  gem 'rspec-rails'
-  gem 'rails-controller-testing'
-  gem 'factory_bot_rails'
+  # gem 'rspec'
+  # gem 'rspec-rails'
+  # gem 'rails-controller-testing'
+  # gem 'factory_bot_rails'
   # gem 'factory_bot'
   gem 'database_cleaner'
-  gem 'rspec-json_expectations'
-  gem 'shoulda-matchers'
+  # gem 'rspec-json_expectations'
+  # gem 'shoulda-matchers'
 
 end
 

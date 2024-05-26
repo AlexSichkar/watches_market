@@ -10,7 +10,9 @@ RSpec.describe "Watches", type: :request do
 describe "GET /index" do
   let(:watches) {create_list :watch, 5}
 
-  before {get :index}
+  before ("GET /index") do
+
+  end
 
   context 'required output per page' do
     # it 'render to index template' do

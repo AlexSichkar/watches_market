@@ -1,0 +1,15 @@
+<% @watches.each do |watch| %>
+  <h2><%= watch.name %></h2>
+
+  <time datetime="<%= watch.formatted_created_at %>">
+    <%= watch.formatted_created_at %>
+  </time>
+
+  <p>
+    <%= watch.price %>
+    <br>
+    <%= link_to 'Edit', edit_watch_path(watch) %>
+    <%= button_to 'Destroy', watch_path(watch.id), data: {"turbo_method": :delete} %>
+    <%= link_to 'Show', watch_path(watch.name) %>
+  </p>
+<% end %>

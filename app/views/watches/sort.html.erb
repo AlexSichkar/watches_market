@@ -1,0 +1,24 @@
+<% if user_signed_in? %>
+  <div> Welcome <%= current_user.email %> </div>
+  <%= button_to "Sign out", destroy_user_session_path, method: :delete %>
+<% else %>
+  <%= button_to "Sign in", new_user_session_path %>
+<% end %>
+
+<h1>List of Watches</h1>
+<table>
+  <tr>
+    <th><%= link_to "Model Name", :sort => "name"%> </th>
+    <th><%= link_to "Price", :sort => "price"%> </th>
+    <th><%= link_to "Category", :sort => "category_id"%> </th>
+  </tr>
+  <% @watches.each do |watch| %>
+    <tr>
+      <td><%= watch.name%></td>
+      <td><%=watch.price %></td><td>
+      <td><%=watch.category_id%></td>
+    </tr>
+  <% end %>
+</table>
+
+

@@ -1,0 +1,31 @@
+<%#= render 'shared/errors', object: @watch %>
+
+<%= form_with model: @watch do |f| %>
+  <div>
+    <%= f.label :name %>
+    <%= f.text_field :name,  placeholder: "Name" %>
+  </div>
+
+  <div>
+    <%= f.label :description %>
+    <%= f.text_area :description, required: true, minlength: 10, placeholder: "Description" %>
+  </div>
+
+  <div>
+    <%= f.label :category_id %>
+    <%= f.collection_select :category_id, Category.all, :id, :title %>
+  </div>
+
+  <div>
+    <%= f.label :price %>
+    <%= f.text_area :price, required: true, placeholder: "Price" %>
+  </div>
+
+  <div>
+    <%= f.label :view_url %>
+    <%= f.text_area :view_url, required: true, minlength: 2, placeholder: "view_url" %>
+  </div>
+
+
+  <%= f.submit "Submit" %>
+<% end %>

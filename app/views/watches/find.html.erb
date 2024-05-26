@@ -1,0 +1,25 @@
+<h1>Find your watch</h1>
+
+<%= form_with url: search_path, method: :get do |f| %>
+  <div>
+    <%= f.label :watch_name %>
+    <%= f.text_field :watch_name,  placeholder: "Model name" %>
+  </div>
+
+  <div>
+    <%= f.label :category_id %>
+    <%= f.collection_check_boxes :category_id, Category.all, :id, :title, prompt: true %>
+  </div>
+
+  <div>
+    <%= f.label :price_min%>
+    <%= f.number_field :price_min, placeholder: "Price min" %>
+  </div>
+
+  <div>
+    <%= f.label :price_max %>
+    <%= f.number_field :price_max, placeholder: "Price max" %>
+  </div>
+
+  <%= f.submit "Search" %>
+<% end %>

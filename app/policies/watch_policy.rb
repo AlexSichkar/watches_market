@@ -11,7 +11,6 @@ class WatchPolicy < ApplicationPolicy
 
   def show?
     true
-    # user.admin? || user.present? if user
   end
 
   def search?
@@ -27,16 +26,15 @@ class WatchPolicy < ApplicationPolicy
   end
 
   def create?
-    user.admin? || user.present? if user
+    user.admin?
   end
 
   def update?
-    # super
-    user.admin? || user.present? if user
+    user.admin?
   end
 
   def destroy?
-    user.admin? || user.present? if user
+    user.admin?
   end
 
   class Scope < ApplicationPolicy::Scope

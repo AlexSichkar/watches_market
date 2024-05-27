@@ -9,7 +9,7 @@
     <%= watch.price %>
     <br>
     <%= link_to 'Edit', edit_watch_path(watch) %>
-    <%= button_to 'Destroy', watch_path(watch.id), data: {"turbo_method": :delete} %>
-    <%= link_to 'Show', watch_path(watch.name) %>
+    <%= button_to 'Destroy', watch_path(watch), data: {"turbo_method": :delete} %>
+    <%= link_to 'Show', watch_path(watch) %>
   </p>
 <% end %>

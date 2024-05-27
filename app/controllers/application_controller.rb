@@ -1,11 +1,8 @@
 class ApplicationController < ActionController::Base
-  # include Pundit::Authorization
   include Authorization
-  #   include Pundit::Authorization
-  # protect_from_fogery
+
   rescue_from ActiveRecord::RecordNotFound, with: :notfound
-
-
+  rescue_from Object::NoMethodError, with: :notfound
   private
   def notfound(exception)
     logger.warn exception

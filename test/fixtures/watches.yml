@@ -7,7 +7,7 @@ one:
   category: cat1
   price: 100
   view_url: http://localhost:3000/watches/photo/etc
-  user: non_admin
+
 two:
 #  id: 2
   name: Casio
@@ -15,7 +15,7 @@ two:
   category: cat1
   price: 100
   view_url: http://localhost:3000/watches/photo/etc
-  user: non_admin
+
 three:
 #  id: 3
   name: Swatch
@@ -23,7 +23,7 @@ three:
   category: cat2
   price: 1000
   view_url: http://localhost:3000/watches/photo/etc
-  user: non_admin
+
 four:
 #  id: 4
   name: Rolex
@@ -31,7 +31,7 @@ four:
   category: cat3
   price: 2000
   view_url: http://localhost:3000/watches/photo/etc
-  user: non_admin
+
 #one:
 #  id: 1
 #  name: Seiko

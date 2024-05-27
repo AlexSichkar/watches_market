@@ -12,7 +12,7 @@ class WatchesController < ApplicationController
   end
 
   def show
-    @watch = Watch.find_by name: params[:name]
+    @watch = Watch.find_by id: params[:id]
     # authorize @watch
   end
 
@@ -26,9 +26,8 @@ class WatchesController < ApplicationController
 
   def create
     @watch = Watch.new watch_params
-    @watch.user = current_user
     if @watch.save
-      redirect_to watches_path
+      redirect_to watch_path(@watch)
     else
       render :new
     end
@@ -37,7 +36,7 @@ class WatchesController < ApplicationController
   def update
     @watch = Watch.find_by id: params[:id]
     if @watch.update watch_params
-      redirect_to watches_path
+      redirect_to watch_path
     else
       render :edit
     end
